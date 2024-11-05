@@ -1,7 +1,7 @@
 def custom_write(file_name, strings):
     strings_positions = {}
     line_number = 1
-    file = open(file_name, 'w')
+    file = open(file_name, 'w', encoding='utf-8')
     for string in strings:
         line_byte = file.tell()
         file.write(f'{string}\n')
@@ -14,7 +14,7 @@ if __name__ == '__main__':
     info = [
         'Text for tell.',
         'Используйте кодировку utf-8.',
-        'Because there are 2 languages!',
+        '二つの言語があるので',
         'Спасибо!'
     ]
     result = custom_write('test.txt', info)
